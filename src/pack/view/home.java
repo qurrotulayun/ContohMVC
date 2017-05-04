@@ -170,7 +170,7 @@ public class home extends javax.swing.JFrame {
         jPanel1.add(cbKategoriBrg);
         cbKategoriBrg.setBounds(190, 80, 240, 30);
 
-        cbjenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pack", "Kadus" }));
+        cbjenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pack", "Kardus" }));
         jPanel1.add(cbjenis);
         cbjenis.setBounds(190, 110, 240, 30);
 
@@ -248,6 +248,11 @@ public class home extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        Tabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Tabel1MouseClicked(evt);
             }
         });
         jScrollPane2.setViewportView(Tabel1);
@@ -334,6 +339,17 @@ public class home extends javax.swing.JFrame {
         String user1 = login.user;
         txtadmin.setText(user1);
     }//GEN-LAST:event_formWindowOpened
+
+    private void Tabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabel1MouseClicked
+        // TODO add your handling code here:
+                int baris = Tabel1.getSelectedRow();
+        if(baris != -1)
+        {
+            txtkode.setText(Tabel1.getValueAt(baris, 0).toString());
+            txtnama.setText(Tabel1.getValueAt(baris, 1).toString());
+            txtharga.setText(Tabel1.getValueAt(baris, 4).toString());
+        }
+    }//GEN-LAST:event_Tabel1MouseClicked
 
     public JTextField getTxtKode(){
  return txtkode;

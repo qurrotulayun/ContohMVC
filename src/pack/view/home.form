@@ -255,7 +255,7 @@
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
                 <StringItem index="0" value="Pack"/>
-                <StringItem index="1" value="Kadus"/>
+                <StringItem index="1" value="Kardus"/>
               </StringArray>
             </Property>
           </Properties>
@@ -425,6 +425,9 @@
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Tabel1MouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
